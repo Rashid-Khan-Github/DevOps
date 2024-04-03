@@ -8,3 +8,5 @@ echo "First Parameter : $VAR1"
 echo "All Parameters : $@"
 
 echo "Count of Parameters : $#"
+
+echo "Script Name : $0"
