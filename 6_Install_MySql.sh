@@ -18,7 +18,7 @@ VALIDATE(){
         echo "$2 $R Installation Failed...!$N"
         exit 1
     else
-        echo "$2 $R Installation Successful...!$N"
+        echo "$R $2 Installation Successful...!$N"
     fi
 }
 
