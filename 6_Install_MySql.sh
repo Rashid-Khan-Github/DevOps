@@ -10,10 +10,10 @@ LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo "Installation Failed...!"
+        echo "$2 Installation Failed...!"
         exit 1
     else
-        echo "Installation Successful...!"
+        echo "$2 Installation Successful...!"
     fi
 }
 
