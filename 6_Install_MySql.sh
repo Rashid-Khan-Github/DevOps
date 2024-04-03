@@ -1,19 +1,24 @@
 #! /bin/bash
-
 # Our Goal is to Install Mysql and Postfix on the linux server.
 
 DATE=$(date +%F---%H:%M:%S)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
+#COLORS
+
+R="\e[32m"
+G="\e[31m"
+N="\e[0m"
+
 
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo "$2 Installation Failed...!"
+        echo "$2 $R Installation Failed...!$N"
         exit 1
     else
-        echo "$2 Installation Successful...!"
+        echo "$2 $R Installation Successful...!$N"
     fi
 }
 
