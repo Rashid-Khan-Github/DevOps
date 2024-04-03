@@ -1,5 +1,10 @@
 #! /bin/bash
 
+# Our Goal is to Install Mysql and Postfix on the linux server.
+
+DATE=$(date +%F---%H:%M:%S)
+LOGFILE=
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
