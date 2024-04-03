@@ -6,4 +6,4 @@ DATE=$(date)
 SUM=$((NUM1+NUM2));
 
 echo "Sum of given numbers is $SUM"
-echo "Todays date is $DATE
+echo "Todays date is $DATE"
