@@ -43,7 +43,7 @@ do
     yum list installed $i
     if [ $? -ne 0 ]
     then 
-        echo "$R $i is not installed, let's begin the installation $N"
+        echo -e "$R $i is not installed, let's begin the installation $N"
         yum install $i -y >> $LOGFILE
         VALIDATE $? $i
     else
