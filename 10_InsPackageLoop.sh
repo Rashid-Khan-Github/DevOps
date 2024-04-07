@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 
-DATE=$(date %+F)
+DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGDIR=/home/centos/shell-logs
 LOGFILE=$LOGDIR/$SCRIPT_NAME-$DATE.log
