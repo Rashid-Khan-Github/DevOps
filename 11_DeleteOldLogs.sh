@@ -1,3 +1,5 @@
+#! /bin/bash
+
 APP_LOGDIR=/home/centos/app-logs
 DATE=$(date +%F---%H:%M:%S)
 LOGSDIR=/home/centos/shell-logs
