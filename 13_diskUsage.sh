@@ -34,10 +34,10 @@ do
     #check whether disk usage is greater than threshold value
     if [ $USAGE -gt $DISK_USAGE_THRESHOLD]
     then
-        MESSAGE+="$R High Usage on disk $PARTITION : $USAGE $N \n"
+        MESSAGE+="$R High Usage on disk $PARTITION : $USAGE $N"
     fi
 
 done <<< $DISK_USAGE
 
-echo -e " $R MESSAGE ALERT : $MESSAGE $N"
+echo -e " $R MESSAGE ALERT : $MESSAGE $N "
 echo "$MESSAGE" | mail -s "Warning ! High Disk Usage Alert..." rashidkhan7805@gmail.com 
