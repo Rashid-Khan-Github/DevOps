@@ -11,7 +11,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-DISK_USAGE=$(df -h | grep -vE "tmpfs|Filesystem")
+DISK_USAGE=$(df -hT | grep -vE "tmpfs|Filesystem")
 DISK_USAGE_THRESHOLD=1
 
 MESSAGE=""
