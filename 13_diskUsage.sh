@@ -41,11 +41,11 @@ do
 
 done <<< $DISK_USAGE
 
-echo -e " $R MESSAGE ALERT : $MESSAGE $N "
+echo -e "$R MESSAGE ALERT : $MESSAGE $N"
 
 # echo "$MESSAGE" | mail -s "WARNING ! High Disk Usage Alert..." rashidkhan7805@gmail.com
 
 # calling another script from the parent script
-sh mail.sh rashidkhan7805@gmail.com "High Disk Usage Alert" $MESSAGE "DEVOPS TEAM", "Memory Alert"
+sh mail.sh rashidkhan7805@gmail.com "High Disk Usage Alert" "$MESSAGE" "DEVOPS TEAM", "Memory Alert"
 
 #           TO_ADDRESS                 "SUBJECT"              "MSG"     "TEAM_NAME"     "ALERT_TYPE"
