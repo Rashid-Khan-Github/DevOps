@@ -36,7 +36,7 @@ do
     #check whether disk usage is greater than threshold value
     if [ $USAGE -gt $DISK_USAGE_THRESHOLD ]
     then
-        MESSAGE+="High Usage on disk $PARTITION: $USAGE%\n"
+        MESSAGE+="High Usage on disk $PARTITION: $USAGE%"
     fi
 
 done <<< $DISK_USAGE
