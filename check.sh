@@ -18,7 +18,7 @@ MESSAGE=""
 while IFS= read line
 do 
 
-    USAGE=$(echo $line | awk '{print $6}' | cut -d % -f 1)
+    USAGE=$(echo $line | awk '{print $6}' | cut -d % -f1)
     echo $USAGE
 
     PARTITION=$(echo $line | awk '{print $1}')
