@@ -2,7 +2,7 @@
 
 TO_ADDRESS=$1
 SUBJECT=$2
-BODY=$(echo "$3" | sed "s/[$/]//g")         # (sed -e '/[]\/$*.^[]/\\&/g' <<< $3)
+BODY=$(echo "$3" | sed "s/[$/]//g")  # Removing char '/' from the string to avoid collision
 echo "Escaped Content: $BODY"
 TEAM_NAME=$4
 ALERT_TYPE=$5

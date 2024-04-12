@@ -13,7 +13,7 @@ N="\e[0m"
 
 # This command will extract only the line except tmpfs or Filesystem i.e /dev/xvdf portions only.
 DISK_USAGE=$(df -hT | grep -vE "tmpfs|Filesystem")
-DISK_USAGE_THRESHOLD=1
+DISK_USAGE_THRESHOLD=0.5
 
 # Create and attach a new volume to you EC2 Running Instance...!
 # Volume must be available in the same AZ where your EC2 is running.
@@ -36,7 +36,7 @@ do
     #check whether disk usage is greater than threshold value
     if [ $USAGE -gt $DISK_USAGE_THRESHOLD ]
     then
-        MESSAGE+="High Usage on disk $PARTITION: $USAGE%"
+        MESSAGE+="High Usage on disk $PARTITION: $USAGE% \n"
     fi
 
 done <<< $DISK_USAGE
