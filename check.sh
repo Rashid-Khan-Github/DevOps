@@ -22,6 +22,8 @@ do
 
     PARTITION=$(echo $line | awk '{print $1}')
 
+    echo "$USAGE ---- $PARTITION"
+
 done <<< $DISK_USAGE
 
 echo -e " $R MESSAGE ALERT : $MESSAGE $N "
