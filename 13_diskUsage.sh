@@ -29,7 +29,6 @@ while IFS= read line
 do 
     # this will extract the disk usage in number format
     USAGE=$(echo $line | awk '{print $6}' | cut -d % -f 1)
-    echo $USAGE
 
     # this command will extact the partition from the line
     PARTITION=$(echo $line | awk '{print $1}')
@@ -37,7 +36,7 @@ do
     #check whether disk usage is greater than threshold value
     if [ $USAGE -gt $DISK_USAGE_THRESHOLD ]
     then
-        MESSAGE+="High Usage on disk $PARTITION: $USAGE"
+        MESSAGE+="High Usage on disk $PARTITION: $USAGE %"
     fi
 
 done <<< $DISK_USAGE
