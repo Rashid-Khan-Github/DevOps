@@ -43,3 +43,5 @@ do
 done <<< $DISK_USAGE
 
 echo -e " $R MESSAGE ALERT : $MESSAGE $N "
+
+echo "$MESSAGE" | mail -s "WARNING ! High Disk Usage Alert..." rashidkhan7805@gmail.com
