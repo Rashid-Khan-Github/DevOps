@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 DATE=$(date +%F--%H:%M:%S)
 USERID=$(id -u)
@@ -43,4 +43,3 @@ do
 done <<< $DISK_USAGE
 
 echo -e " $R MESSAGE ALERT : $MESSAGE $N "
-echo "$MESSAGE" | mail -s "Warning ! High Disk Usage Alert..." rashidkhan7805@gmail.com 
