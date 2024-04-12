@@ -1,5 +1,3 @@
-#!/bin/bash
-
 DATE=$(date +%F--%H:%M:%S)
 USERID=$(id -u)
 SCRIPT_NAME=$0
@@ -11,18 +9,9 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-# This command will extract only the line except tmpfs or Filesystem i.e /dev/xvdf portions only.
 DISK_USAGE=$(df -h | grep -vE "tmpfs|Filesystem")
 DISK_USAGE_THRESHOLD=1
 
-# Create and attach a new volume to you EC2 Running Instance...!
-# Volume must be available in the same AZ where your EC2 is running.
-
-# IFS= is the default Internal Field separator environment variable.
-# Default IFS value is space.
-# It will trim the extra whitespaces (no need but good practice to write)
-
-#Looping through all the available disk lines
 
 MESSAGE=""
 while IFS= read line
