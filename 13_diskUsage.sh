@@ -15,7 +15,7 @@ DISK_USAGE_THRESHOLD=1
 # Create and attach a new volume to you EC2 Running Instance...!
 # Volume must be available in the same AZ where your EC2 is running.
 
-while read line
+while IFS= read line
 do 
 
     echo "Output : $line"
