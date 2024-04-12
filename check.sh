@@ -17,9 +17,8 @@ DISK_USAGE_THRESHOLD=1
 MESSAGE=""
 while IFS= read line
 do 
-
-    USAGE=$(echo $line | awk '{print $6}' | cut -d % -f1)
-    echo $USAGE
+    echo $line
+    USAGE=$(echo $line | awk '{print $6}' | cut -d % -f 1)
 
     PARTITION=$(echo $line | awk '{print $1}')
 
