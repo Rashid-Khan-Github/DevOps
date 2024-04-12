@@ -32,7 +32,7 @@ do
     PARTITION=$(echo $line | awk '{print $1}')
 
     #check whether disk usage is greater than threshold value
-    if [ $USAGE -gt $DISK_USAGE_THRESHOLD]
+    if [ $USAGE -gt $DISK_USAGE_THRESHOLD ]
     then
         MESSAGE+="$R High Usage on disk $PARTITION : $USAGE $N"
     fi
