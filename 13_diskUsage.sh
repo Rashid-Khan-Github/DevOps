@@ -47,3 +47,5 @@ echo -e " $R MESSAGE ALERT : $MESSAGE $N "
 
 # calling another script from the parent script
 sh mail.sh rashidkhan7805@gmail.com "High Disk Usage Alert" $MESSAGE "DEVOPS TEAM", "Memory Alert"
+
+#           TO_ADDRESS                 "SUBJECT"              "MSG"     "TEAM_NAME"     "ALERT_TYPE"
