@@ -3,7 +3,7 @@
 TO_ADDRESS=$1
 SUBJECT=$2
 BODY=$(sed -e '/[]\/$*.^[]/\\&/g' <<< $3)
-echo "Escaped Content :  $BODY"
+echo "Escaped Content: $BODY"
 TEAM_NAME=$4
 ALERT_TYPE=$5
 
@@ -11,4 +11,4 @@ ALERT_TYPE=$5
 
 FINAL_MSG=$(sed -e "s/TEAM_NAME/DevOps Team/g" -e "s/ALERT_TYPE/MEMORY ALERT..!!/g" -e "s/MESSAGE/$BODY/" template.html)
 
-echo "$FINAL_MSG" | mail -s "$(echo -e "$SUBJECT\nContent-Type: text/html")" $TO_ADDRESS
+echo "$FINAL_MSG" | mail -s "$(echo -e "$SUBJECT\nContent-Type: text/html")" "$TO_ADDRESS"
