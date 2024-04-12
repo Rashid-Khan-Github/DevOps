@@ -12,7 +12,7 @@ Y="\e[33m"
 N="\e[0m"
 
 # This command will extract only the line except tmpfs or Filesystem i.e /dev/xvdf portions only.
-DISK_USAGE=$(df -h | grep -vE "tmpfs|Filesystem")
+DISK_USAGE=$(df -hT | grep -vE "tmpfs|Filesystem")
 DISK_USAGE_THRESHOLD=1
 
 # Create and attach a new volume to you EC2 Running Instance...!
