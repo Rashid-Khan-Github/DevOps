@@ -27,6 +27,7 @@ while IFS= read line
 do 
     # this will extract the disk usage in number format
     USAGE=$(echo $line | awk '{print $6}' | cut -d % -f 1)
+    echo $USAGE
 
     # this command will extact the partition from the line
     PARTITION=$(echo $line | awk '{print $1}')
