@@ -36,11 +36,14 @@ do
     #check whether disk usage is greater than threshold value
     if [ $USAGE -gt $DISK_USAGE_THRESHOLD ]
     then
-        MESSAGE+="High Usage on disk $PARTITION: $USAGE %"
+        MESSAGE+="High Usage on disk $PARTITION: $USAGE%"
     fi
 
 done <<< $DISK_USAGE
 
 echo -e " $R MESSAGE ALERT : $MESSAGE $N "
 
-echo "$MESSAGE" | mail -s "WARNING ! High Disk Usage Alert..." rashidkhan7805@gmail.com
+# echo "$MESSAGE" | mail -s "WARNING ! High Disk Usage Alert..." rashidkhan7805@gmail.com
+
+# calling another script from the parent script
+sh mail.sh rashidkhan7805@gmail.com "High Disk Usage Alert" $MESSAGE "DEVOPS TEAM", "Memory Alert"
