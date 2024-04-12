@@ -7,7 +7,6 @@ SCRIPT_NAME=$0
 LOGDIR=/home/centos/shell-logs
 LOGFILE=$LOGDIR/$SCRIPT_NAME-$DATE.log
 
-
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
